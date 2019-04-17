@@ -43,7 +43,8 @@ class Sort {
 					default:
 				}
 			
-		} while(ch!=6);
+		} while(ch!=6){
+		}
 	}
 	
 	public static void BinarySort(int a[],int n) {
@@ -67,8 +68,9 @@ class Sort {
 			int imin=i;
 			int temp;
 			for(int j=i+1;j<n;j++){
-				if(a[j]<a[imin])
+				if(a[j]<a[imin]) {
 					imin=j;
+				}
 			}
 			temp=a[i];
 			a[i]=a[imin];
@@ -116,8 +118,7 @@ class Sort {
 		int i,j,k;
 		i=j=k=0;
 		while(i<nL&&j<nR){
-			if(left[i]<=right[j])
-			{
+			if(left[i]<=right[j]){
 				a[k]=left[i];
 				i++;
 				k++;
@@ -137,20 +138,17 @@ class Sort {
 		}
 	}
 	
-	public static void QuickSort(int a[],int start,int end)
-	{ // no line break
-		if(start<end)
-		{
+	public static void QuickSort(int a[],int start,int end)	{
+		if(start<end){
 			int pIndex=QuickPartition(a,start,end);
 			QuickSort(a,start,pIndex-1);
 			QuickSort(a,pIndex+1,end);
-		}
-		else
+		} else {
 			return;
+		}
 		
 	}
-	public static int QuickPartition(int a[],int start,int end)
-	{ // no line break
+	public static int QuickPartition(int a[],int start,int end)	{
 		int temp;
 		int pivot=a[end];
 		int pIndex=start;
